@@ -16,7 +16,7 @@ int sine[] = {4, 3, 2, 1, 0, 15, 14, 13, 12, 20, 21, 22, 23, 24, 25, 26, 27, 28,
  
 void setup() {
   strip.begin();
-  strip.setBrightness(20); //adjust brightness here
+  strip.setBrightness(10); //adjust brightness here
   strip.show(); // Initialize all pixels to 'off'
 }
  
