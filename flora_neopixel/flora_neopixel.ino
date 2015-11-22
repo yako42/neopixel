@@ -25,7 +25,7 @@ for(int i=0; i<70; i++) {
   strip.setPixelColor(sine[i], strip.Color(0, 0, 0));
       
   for (int j=0; j<10; j++){
-    strip.setPixelColor(sine[(j+i+1)%70], strip.Color(5, 250, 200)); //change RGB color value here
+    strip.setPixelColor(sine[(j+i+1)%70], strip.Color(5+j*30, 250-j*20, 200-j*30)); //change RGB color value here
     }
   strip.show();
   delay(60);
