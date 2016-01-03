@@ -17,19 +17,38 @@ int sine[] = {22,21,20,19,18,17,16,15,14,13,23,12,11,10,9,8,7,6,5,4,3,2,29,30,31
  
 void setup() {
   strip.begin();
-  strip.setBrightness(10); //adjust brightness here
+  strip.setBrightness(15); //adjust brightness here
   strip.show(); // Initialize all pixels to 'off'
 }
  
 void loop() {
 for(int i=0; i<52; i++) { 
   strip.setPixelColor(sine[i], strip.Color(0, 0, 0));
-      
-  for (int j=0; j<10; j++){
-    strip.setPixelColor(sine[(i + j + 1)%52], strip.Color(5+j*30, 250-j*20, 200 - j * 20)); //change RGB color value here
+
+  for (int j=0; j<4; j++){
+    int r = 1+j *40;
+    int g = 200-j*40; 
+    int b = 100+j*35;
+    int pixel = sine[(i + j + 1)%52];
+    
+    strip.setPixelColor(pixel, strip.Color(r, g, b)); //change RGB color value here
+    if (pixel >= 0 && pixel <= 22) {
+      strip.setBrightness(30); //adjust brightness here
+    } else {
+      strip.setBrightness(10); //adjust brightness here
     }
+    Serial.print(pixel);
+    Serial.print(": ");
+    Serial.print(r);
+    Serial.print(",");
+    Serial.print(g);
+    Serial.print(",");
+    Serial.print(b);
+    Serial.print("\n");
+  }
   strip.show();
-  delay(120);
+  delay(50);
+  Serial.print("\n");
  }
 }
 
