@@ -50,7 +50,9 @@ for(int i=0; i<44; i++) {
   }
   single.show(); 
   strip.show();
-  delay(20);
+
+  
+  delay(30);
   
  }
 
@@ -80,11 +82,7 @@ for(int i=0; i<44; i++) {
   single.show(); 
   strip.show();
   delay(20);
-  
-  
- }
-
- 
+ } 
 }
  
 // hello
