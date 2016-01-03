@@ -28,6 +28,8 @@ void setup() {
 }
  
 void loop() {
+
+  
 for(int i=0; i<44; i++) { 
   strip.setPixelColor(sine[i], strip.Color(0, 0, 0));
   
@@ -54,7 +56,7 @@ for(int i=0; i<44; i++) {
 
  
  
- for(int i=51; i>=0; i--) { 
+ for(int i=51; i>=8; i--) { 
   strip.setPixelColor(sine[i], strip.Color(0, 0, 0));
   
   // single
